@@ -7,12 +7,24 @@ import { formatMessage } from 'umi-plugin-react/locale';
 
 import SelectLang from '@/components/SelectLang';
 import { ConnectProps, ConnectState } from '@/models/connect';
-import logo from '../assets/logo.svg';
+import logo from '../assets/cb_logo.svg';
 import styles from './UserLayout.less';
 
 export interface UserLayoutProps extends ConnectProps {
   breadcrumbNameMap: { [path: string]: MenuDataItem };
 }
+
+const defaultLinks = [
+  {
+    key: 'JionLab',
+    title: 'JionLab',
+    href: 'https://www.jionlab.co.kr',
+    blankTarget: true,
+  },
+ 
+];
+
+const defaultCopyright = '2019 JionLab ';
 
 const UserLayout: React.SFC<UserLayoutProps> = props => {
   const {
@@ -47,14 +59,14 @@ const UserLayout: React.SFC<UserLayoutProps> = props => {
             <div className={styles.header}>
               <Link to="/">
                 <img alt="logo" className={styles.logo} src={logo} />
-                <span className={styles.title}>Ant Design</span>
+                <span className={styles.title}>CoreBridge Web Admin</span>
               </Link>
             </div>
-            <div className={styles.desc}>Ant Design 是西湖区最具影响力的 Web 设计规范</div>
+            <div className={styles.desc}>JionLab Co,LTD</div>
           </div>
           {children}
         </div>
-        <DefaultFooter />
+        <DefaultFooter links={defaultLinks} copyright={defaultCopyright}/>
       </div>
     </DocumentTitle>
   );

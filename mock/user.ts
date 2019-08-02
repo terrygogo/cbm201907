@@ -2,53 +2,38 @@
 export default {
   // 支持值为 Object 和 Array
   'GET /api/currentUser': {
-    name: 'Serati Ma',
+    name: 'terry',
     avatar: 'https://gw.alipayobjects.com/zos/antfincdn/XAosXuNZyF/BiazfanxmamNRoxxVxka.png',
     userid: '00000001',
-    email: 'antdesign@alipay.com',
-    signature: '海纳百川，有容乃大',
-    title: '交互专家',
-    group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+    email: 'terry@jionlab.co.kr',
+    signature: '',
+    title: '이사',
+    group: 'exec',
     tags: [
       {
         key: '0',
-        label: '很有想法的',
+        label: '개발',
       },
       {
         key: '1',
-        label: '专注设计',
+        label: '소발',
       },
-      {
-        key: '2',
-        label: '辣~',
-      },
-      {
-        key: '3',
-        label: '大长腿',
-      },
-      {
-        key: '4',
-        label: '川妹子',
-      },
-      {
-        key: '5',
-        label: '海纳百川',
-      },
+     
     ],
     notifyCount: 12,
     unreadCount: 11,
-    country: 'China',
+    country: 'korea',
     geographic: {
       province: {
-        label: '浙江省',
+        label: '성동구',
         key: '330000',
       },
       city: {
-        label: '杭州市',
+        label: '서울',
         key: '330100',
       },
     },
-    address: '西湖区工专路 77 号',
+    address: '성수이로66',
     phone: '0752-268888888',
   },
   // GET POST 可省略

@@ -53,6 +53,29 @@ const BlockCodeView: React.SFC<{
   );
 };
 
+const PopCodeView: React.SFC<{
+  url: string;
+}> = ({ url }) => {
+  const blockUrl = `추가 기능을 추가 합니다`;
+  return (
+    <div className={styles['copy-block-view']}>
+      <Typography.Paragraph
+        copyable={{
+          text: blockUrl,
+          onCopy: () => onBlockCopy(url),
+        }}
+        style={{
+          display: 'flex',
+        }}
+      >
+        <pre>
+          <code className={styles['copy-block-code']}>{blockUrl}</code>
+        </pre>
+      </Typography.Paragraph>
+    </div>
+  );
+};
+
 interface RoutingType {
   location: {
     pathname: string;
@@ -66,14 +89,14 @@ export default connect(({ routing }: { routing: RoutingType }) => ({
   const divDom = useRef<HTMLDivElement>(null);
   return (
     <Popover
-      title={<FormattedMessage id="app.preview.down.block" defaultMessage="下载此页面到本地项目" />}
+      title={<FormattedMessage id="app.preview.down.block" defaultMessage="Download this page to your local project" />}
       placement="topLeft"
-      content={<BlockCodeView url={url} />}
+      content={<PopCodeView url={url} />}
       trigger="click"
       getPopupContainer={dom => (divDom.current ? divDom.current : dom)}
     >
       <div className={styles['copy-block']} ref={divDom}>
-        <Icon type="download" />
+        <Icon type="smile" />
       </div>
     </Popover>
   );

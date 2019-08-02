@@ -535,7 +535,7 @@
       hot: 7,
     },
     {
-      name: '团队',
+      name: 'haha',
       ref: 3,
       koubei: 9,
       output: 6,
@@ -553,7 +553,7 @@
   ];
   const radarData = [];
   const radarTitleMap = {
-    ref: '引用',
+    ref: 'moi',
     koubei: '口碑',
     output: '产量',
     contribute: '贡献',
